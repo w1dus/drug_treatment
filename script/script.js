@@ -3,7 +3,20 @@
 document.addEventListener("DOMContentLoaded", function(e){
   slide_menu()
   card_news_slide();
+  login_popup_close();
 })
+
+const login_popup_close = () => {
+  $('.login-section .popup-wrap .btn-wrap .close-btn').click(function(){
+    $('.login-section').removeClass('show');
+  })
+  $('.login-popup .popup-wrap .login-btn').click(function(){
+    $('.login-popup').removeClass('show')
+  })
+  $('.login-popup .popup-wrap .btn-wrap .close-btn').click(function(){
+    $('.login-popup').removeClass('show')
+  })
+}
 
 const card_news_slide = () => {
   var swiper = new Swiper(".main .notice-section .main-news .mySwiper", {
@@ -56,5 +69,12 @@ const slide_menu = () => {
   $('.slide-menu-close').click(function(){
     $('.slide-menu-close').removeClass('show');
     $('.slide-menu').removeClass('show');
+  })
+
+  $('.slide-menu .menu-list > li > a.sub').click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('on')
+    $(this).siblings(".sub-list").slideToggle();
+
   })
 }

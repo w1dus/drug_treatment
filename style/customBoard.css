@@ -1,5 +1,5 @@
 :root {
-    --board-active-color: #365A91;
+    --board-active-color: #275143;
 }   
 
 /* 관리자 메뉴 */
@@ -33,7 +33,7 @@
 }
 
 /* 게시판 공통 */
-.boardArti{ padding: 100px 0; }
+/* .boardArti{ padding: 100px 0; } */
 
 /* 게시판 타이틀 */
 .boardArti .boardBanner{ margin-bottom: 50px; text-align: center; }
