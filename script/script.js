@@ -4,7 +4,18 @@ document.addEventListener("DOMContentLoaded", function(e){
   slide_menu()
   card_news_slide();
   login_popup_close();
+  video_view_popup();
 })
+
+const video_view_popup = () => {
+  $('.video-view-btn').click(function(e){
+    e.preventDefault();
+    $('.video-view-popup').addClass('show');
+  })
+  $('.video-view-popup .btn-wrap .close-btn').click(function(){
+    $('.video-view-popup').removeClass('show');
+  })
+}
 
 const login_popup_close = () => {
   $('.login-section .popup-wrap .btn-wrap .close-btn').click(function(){
